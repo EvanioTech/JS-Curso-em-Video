@@ -9,7 +9,20 @@
     <script>
         window.alert("vamos que vamos") // alerta na tela
         window.confirm("vamos que vamos")  // janela com ok e cancel
-        window.prompt("Seu Nome?")// Pode inserir no pop up que abrir
+      let nome =  window.prompt("Seu Nome?")// Pode inserir no pop up que abrir
+      window.alert(`Prazer ${nome}`)
+      let n1 = parseInt(window.prompt("Digite um numero")) // Number.parseInt(n) faz a mesma coisa mais Number seria melhor pois si fosse numero quebraado ele tb faria a conta de boa
+      let n2 = parseInt(window.prompt("Digite um numero")) // Number.parseFloat(n) para numero quebrados
+      let soma = n1 + n2                                    // String(n) para converter para string ou n.toString()
+      window.alert(`o resultado da soma é ${soma}`)
     </script>
+
+    //length conta os caracteres ou index
+    //toUpperCase()  full maiuculo
+    //toLowerCase() full minusculo
+    // toLocaleString('pt-BR' , {style: 'currency', currency: 'BRL'})
+    // ** numero elevado
+    // opredores aritméticos > Operadores relacionais> Operadores lógicos
+    //operador ternário teste ? true : false
 </body>
 </html>
