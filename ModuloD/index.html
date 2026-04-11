@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Detran</title>
+    <style>
+        div#res {
+            font-size: 22px;
+            
+        }
+    </style>
+</head>
+<body>
+    <h1>Sistema de Multa </h1>
+    Velocidade do carro: <input type="number" name="txtvel" id="txtvel">
+    <input type="button" value="Verificar" onclick="calcular()">
+    <div id="res">
+    </div>
+    <div id="alerta">
+    </div>
+    <div id="dica">
+    </div>
+
+   
+    
+    <script>
+        function calcular() {
+            let txtv = window.document.querySelector('input#txtvel')
+            let res = window.document.querySelector('div#res')
+            let alerta = window.document.getElementById('alerta')
+            let dica = window.document.getElementById('dica')
+            let vel = Number(txtv.value)
+            res.innerHTML = `<p>Sua velocidade atual é de <strong>${vel}Km/h</strong></p>`
+            if (vel > 60) {
+                alerta.innerHTML = `<p>Você esta Multado por excesso de velocidade</p>`
+                alerta.style.color ='red'
+                alerta.style.fontSize = '25px'
+                  
+            }
+            dica.innerHTML += `<p>Dirija sempre com cinto de segurança!</p>`
+            dica.style.color = 'blue'
+            
+        }
+        
+        
+    </script>
+</body>
+</html>
