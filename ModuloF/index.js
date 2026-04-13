@@ -23,3 +23,16 @@ for( let i in aluno1) {
 
 let pos = aluno1.indexOf(9)
 console.log(pos)
+
+
+let amigo = {nome: 'matias',
+    sexo: 'M',
+    peso: 101.5,
+    engordar(p=0){
+        console.log('Engordou')
+        this.peso += p
+    }
+    
+}
+amigo.engordar(10)
+console.log(` O ${amigo.nome} pesa ${amigo.peso}Kg `)
